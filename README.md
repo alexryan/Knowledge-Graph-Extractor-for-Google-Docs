@@ -16,7 +16,7 @@ This tool is part of the **[Half Brain, Half Bot](https://github.com/Half-Brain-
 The **Knowledge Extractor** automates this extraction process by:
 ✅ **Identifying** and extracting structured "Knowledge Objects" (KOs).  
 ✅ **Preserving relationships** between knowledge objects through hyperlinks.  
-✅ **Transforming** human knowledge graphs into **machine-readable JSON data**.  
+✅ **Transforming** human knowledge graphs into **machine-readable JSON-LD data**.  
 ✅ **Allowing AI models** to reason over expert-created graphs **without manual data entry**.  
 
 ---
@@ -35,81 +35,27 @@ By transforming knowledge objects into structured graphs, we **eliminate bottlen
 
 ## 🛠️ Installation & Setup
 
-### **🔹 Prerequisites**
-Ensure you have the following installed:
-- **Python 3.10+**
-- **Google Chrome or Brave** (for JavaScript execution)
-- **Node.js** (for browser automation via Puppeteer)
-- **Git** (for version control)
+### **🔹 Steps to Install & Run**
+1. **Copy the Sample Google Doc**
+   - Open this publicly shared document:  
+     [Knowledge Object: Cardiovascular Disease KO](https://docs.google.com/document/d/1fIjefD3yYNnV0i3X9n8xL8CnOhE0BDyiZWXcGb8cRgY/edit?usp=sharing)
+   - Click **File > Make a Copy** to create your own editable version.
 
-### **🔹 Clone the Repository**
-```bash
-git clone https://github.com/Half-Brain-Half-Bot/Knowledge-Extractor-for-Google-Docs.git
-cd Knowledge-Extractor-for-Google-Docs
-```
+2. **Install and Run the Google Apps Script**
+   - Open the copied Google Doc.
+   - Click **Extensions > Apps Script**.
+   - Paste the provided Google Apps Script code (available in this repository).
+   - Run the script to extract structured JSON-LD from the document.
 
-### **🔹 Install Python Dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-### **🔹 Install Node.js Dependencies**
-```bash
-npm install
-```
+3. **Observe the JSON-LD Output**
+   - The extracted data will be shown in a dialog box.
+   - This JSON-LD can be saved or integrated into external knowledge graph tools.
 
 ---
 
-## 🏃 Running the Knowledge Extractor
-### **🔹 Extract Knowledge from a Public Google Doc**
-```bash
-python extract.py --url "https://docs.google.com/document/d/1fIjefD3yYNnV0i3X9n8xL8CnOhE0BDyiZWXcGb8cRgY/edit?usp=sharing"
-```
-🔹 The extracted knowledge will be output as **JSON**.  
-
-🔹 A sample publicly shared Google Doc for testing:  
-[Knowledge Object: Cardiovascular Disease KO](https://docs.google.com/document/d/1fIjefD3yYNnV0i3X9n8xL8CnOhE0BDyiZWXcGb8cRgY/edit?usp=sharing)
-
----
-
-## 📈 Expected JSON Output
-```json
-{
-  "name": "Knowledge Object: Cardiovascular Disease KO",
-  "permalink": "https://docs.google.com/open?id=1fIjefD3yYNnV0i3X9n8xL8CnOhE0BDyiZWXcGb8cRgY",
-  "knowledge_objects": [
-    {
-      "name": "Knowledge Object: Cardiovascular Disease, Zeta-Potential, and Thymic Involution KO",
-      "permalink": "https://docs.google.com/document/d/1FJo96kOlxj5PB_5fkZxH7ZMfyV7ceZaL5fIIqwNexqA/edit?usp=sharing"
-    },
-    {
-      "name": "Knowledge Object: Cardiovascular Disease and the Protective Gel Layer Hypothesis KO",
-      "permalink": "https://docs.google.com/document/d/18-9eRjuHT24PWWzEsnIm9Txv1YCQh8Sw4bkYfrEHA40/edit?usp=sharing"
-    }
-  ]
-}
-```
-
----
-
-## 🔧 Troubleshooting
-
-### **🔹 No Knowledge Objects Found**
-- Ensure the document follows the **Knowledge Object Naming Convention**:
-  - `Knowledge Object: <Name> KO`
-- The "Related Knowledge Objects" section must be a **Heading 3**.
-
-### **🔹 Permission Errors**
-- Ensure the document is **publicly shared**:  
-  1. Open the Google Doc.
-  2. Click **Share** (📎).
-  3. Change permissions to **"Anyone with the link" → Viewer**.
-
----
-
-## 📚 Future Enhancements
-- ✅ **GUI Interface** for non-technical users.
-- ✅ **Automated document sharing prompt** before extraction.
+## 🏃 Future Enhancements
+- ✅ **Tooling to merge and visualize the latest JSON-LD** from subject matter experts.
+- ✅ **Interactive browsing of the extracted Knowledge Graph**.
 - ✅ **Integration with Neo4j** for knowledge graph visualization.
 - ✅ **Export to RDF/OWL** for ontology-based reasoning.
 
@@ -125,13 +71,7 @@ We welcome contributions to improve this project! If you'd like to contribute:
 
 ---
 
-## 🔗 Related Projects
-- **[Half Brain, Half Bot](https://github.com/Half-Brain-Half-Bot)**  
-- **[Knowledge Graph Extraction API](https://github.com/Half-Brain-Half-Bot/Knowledge-Graph-API)**  
-
----
-
-## 📜 License
+## 📚 License
 This project is licensed under the **MIT License**.  
 See [LICENSE](LICENSE) for details.
 
