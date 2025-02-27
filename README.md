@@ -76,5 +76,10 @@ This project is licensed under the **MIT License**.
 See [LICENSE](LICENSE) for details.
 
 ---
+
+## Contributors
+- **@alexryan** → Original Creator & Lead Developer
+
+---
 🚀 **Bridging Human Knowledge and AI — One Document at a Time.**
 
