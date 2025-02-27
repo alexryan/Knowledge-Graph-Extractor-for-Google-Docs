@@ -78,7 +78,7 @@ See [LICENSE](LICENSE) for details.
 ---
 
 ## Contributors
-- **@alexryan** → Original Creator & Lead Developer
+- **[@alexryan](https://github.com/alexryan)** → Original Creator & Lead Developer
 
 ---
 🚀 **Bridging Human Knowledge and AI — One Document at a Time.**
